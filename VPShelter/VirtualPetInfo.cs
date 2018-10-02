@@ -8,6 +8,20 @@ namespace VPShelter
 {
     class VirtualPetInfo: VirtualPet
     {
+        private string petType;
+        private string petDiet;
+
+        public string GetType
+        {
+            get { return this.petType; }
+            set { this.petType = value; }
+        }
+
+        public string GetDiet
+        {
+            get { return this.petDiet; }
+            set { this.petDiet = value; }
+        }
 
     }
 }

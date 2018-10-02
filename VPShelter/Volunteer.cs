@@ -20,12 +20,8 @@ namespace VPShelter
 
         public void Feed()
         {
-
+            Console.WriteLine("All pets have been fed.");
         }
-
-        public void Water()
-        {
-
-        }
+        
     }
 }

@@ -9,11 +9,11 @@ namespace VPShelter
     class VirtualPet
     {
         //Fields
-        private int hunger = 5;
-        private int thirst = 5;
-        private int boredom = 5;
-        private string name;
-        private string descrip;
+        public int hunger = 5;
+        public int thirst = 5;
+        public int boredom = 5;
+        public string name;
+        public string descrip;
 
         //Properties
         public string GetName
@@ -52,7 +52,7 @@ namespace VPShelter
             //Default constructor
         }
 
-        public VirtualPet(int hunger, int thirst, int boredom, int sickness, string name, string descrip)
+        public VirtualPet(string name, string descrip, int hunger, int thirst, int boredom)
         {
             this.GetHunger = hunger;
             this.GetThirst = thirst;
@@ -61,24 +61,30 @@ namespace VPShelter
             this.GetDescrip = descrip;
         }
 
+        public VirtualPet(string name, string descrip)
+        {
+            this.GetName = name;
+            this.GetDescrip = descrip;
+        }
+
         //Methods
         public void GetFood()
         {
-            Console.WriteLine(" ");
             GetHunger = 0;
             GetThirst++;
         }
 
         public void GetWater()
         {
-            Console.WriteLine(" ");
             GetThirst = 0;
+
         }
 
         public void GetPlay()
         {
-            Console.WriteLine(" ");
             GetBoredom = 0;
+            GetHunger ++;
+            GetThirst++;
         }
 
         

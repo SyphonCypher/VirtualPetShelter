@@ -9,8 +9,13 @@ namespace VPShelter
     static class VirtualPetShelter
     {
         
-        static List<string> Pets { get; set; }
-        static List<string> Employees { get; set; }
-        
+        static List<VirtualPet> Pets { get; set; }
+        static List<Employee> Employees { get; set; }
+
+        static VirtualPetShelter()
+        {
+            Pets = new List<VirtualPet>();
+            Employees = new List<Employee>();
+        }
     }
 }
